@@ -1,0 +1,24 @@
+[
+    {
+   "doi": "10.3934/dcds.2024052",
+   "coauthors": ["F. Durand", "B. Espinoza"],
+   "title": "The Jacobs--Keane theorem from the S-adic viewpoint",
+   "journal": "DCDS",
+   "year": 2024,
+   "pages": [3077, 3108],
+   "arxiv": "2307.10663",
+   "website": "https://www.aimsciences.org//article/doi/10.3934/dcds.2024052",
+   "abstract": "In the light of recent developments of the S-adic study of subshifts, we revisit, within this framework, a well-known result on Toeplitz subshifts due to Jacobs--Keane giving a sufficient combinatorial condition to ensure discrete spectrum. We show that the notion of coincidences, originally introduced in the '70s for the study of the discrete spectrum of substitution subshifts, together with the S-adic structure of the subshift allow to go deeper in the study of Toeplitz subshifts. We characterize spectral properties of the factor maps onto the maximal equicontinuous topological factors by means of coincidences density. We also provide an easy to check necessary and sufficient condition to ensure unique ergodicity for constant length S-adic subshifts."
+  },
+	{
+   "doi": "10.1017/etds.2023.7",
+   "coauthors": ["F. Durand"],
+   "title": "Dynamical properties of minimal Ferenczi subshifts",
+   "journal": "ETDS",
+   "year": 2023,
+   "pages": [3923, 3970],
+   "arxiv": "2207.14097",
+   "website": "https://www.cambridge.org/core/journals/ergodic-theory-and-dynamical-systems/article/dynamical-properties-of-minimal-ferenczi-subshifts/C73E9DEA04477614BBD3B8D17DA10F5A",
+   "abstract": "We provide an explicit S-adic representation of rank-one subshifts with bounded spacers and call the subshifts obtained in this way ‘minimal Ferenczi subshifts’. We aim to show that this approach is very convenient to study the dynamical behavior of rank-one systems. For instance, we compute their topological rank, the strong and the weak orbit equivalence class. We observe that they have an induced system that is a Toeplitz subshift having discrete spectrum. We also characterize continuous and non-continuous eigenvalues of minimal Ferenczi subshifts."
+  }
+]

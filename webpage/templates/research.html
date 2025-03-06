@@ -2,7 +2,21 @@
 
 {% macro publication_coauthors(coauthors) %}
 {% if coauthors %}
-<auteurs>with {% for author in coauthors[:-1] %}{{ author }}, {% endfor %} {{coauthors[-1]}}</auteurs>
+{% if coauthors|length == 1 %}
+<auteurs>
+with {{coauthors[0]}}
+</auteurs>
+{% endif %}
+{% if coauthors|length == 2 %}
+<auteurs>
+with {{coauthors[0]}} and {{coauthors[1]}}
+</auteurs>
+{% endif %}
+{% if coauthors|length > 2%}
+<auteurs>
+with {% for author in coauthors[:-2] %}{{ author }}, {% endfor %} {{coauthors[-2]}} and {{coauthors[-1]}}
+</auteurs>
+{% endif %}
 <br/>
 {% endif %}
 {%- endmacro %}
@@ -59,6 +73,7 @@ pp. {{ pub.pages[0]}}-{{ pub.pages[1] }}
 <p>
 <ol reversed="true" class="publi">
 {% for pub in publications %}
+{% set abs_id = loop.index %}
 <li>
 
 {{ publication_coauthors(pub.coauthors) }}
@@ -70,9 +85,17 @@ pp. {{ pub.pages[0]}}-{{ pub.pages[1] }}
 {{ publication_arxiv(pub.arxiv) }}
 
 {% if pub.abstract %}
-<abstract>
-{{ pub.abstract }}
-</abstract>
+<label for={{abs_id}}>
+Abstract.
+</label>
+
+<input type="checkbox" id={{abs_id}}>
+
+<a class="content">
+  <abstract>
+  {{ pub.abstract }}
+  </abstract>
+</a>
 {% endif %}
 </li>
 {% endfor %}
@@ -89,6 +112,7 @@ pp. {{ pub.pages[0]}}-{{ pub.pages[1] }}
 <p>
 <ul class="publi">
 {% for pub in prepublications %}
+{% set abs_id = loop.index %}
 <li>
 
 {{ publication_coauthors(pub.coauthors) }}
@@ -99,9 +123,17 @@ pp. {{ pub.pages[0]}}-{{ pub.pages[1] }}
 {{ publication_arxiv(pub.arxiv) }}
 
 {% if pub.abstract %}
-<abstract>
-{{ pub.abstract }}
-</abstract>
+<label for={{abs_id}}>
+Abstract.
+</label>
+
+<input type="checkbox" id={{abs_id}}>
+
+<a class="content">
+  <abstract>
+  {{ pub.abstract }}
+  </abstract>
+</a>
 {% endif %}
 
 </li>
@@ -153,8 +185,11 @@ pp. {{ pub.pages[0]}}-{{ pub.pages[1] }}
 <div class="section">
 <h2>Talks</h2>
 <p>
-<ul>
+<h3>Conferences</h3>
 {% for talk in talks %}
+{% if talk.type == "conference" %}
+
+<ul>
 <li>
 
 <titre>"{{ talk.title }}"</titre>
@@ -167,8 +202,32 @@ pp. {{ pub.pages[0]}}-{{ pub.pages[1] }}
 <br/>
 
 </li>
-{% endfor %}
 </ul>
+{% endif %}
+{% endfor %}
+</li>
+
+<h3>Seminars</h3>
+{% for talk in talks %}
+{% if talk.type == "seminar" %}
+
+<ul>
+<li>
+
+<titre>"{{ talk.title }}"</titre>
+<br/>
+
+<!-- TODO: put slides, if they are available -->
+
+<a href={{talk.website}}>{{ talk.name }} </a> <br/>
+{{ talk.date }}, {{talk.place }} ({{talk.city }}, {{talk.country}})
+<br/>
+
+</li>
+</ul>
+{% endif %}
+{% endfor %}
+</li>
 </p>
 
 </div>  <!-- end of section -->

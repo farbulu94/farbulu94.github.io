@@ -9,23 +9,31 @@ As a teaching assistant:
 
 <!-- Teaching assistant -->
 
-<p>
-<ul>
+{% set semesters = [] %}
 {% for teach in teaching_assistant %}
-<li>
-
-<!-- TODO: put slides, exercise sheets, if they are available -->
-
-{{teach.semester}} Semester {{teach.year}}. {{teach.place}} ({{teach.city}}, {{teach.country}})<br/>
-{{teach.code}}: {{teach.course}}. {{teach.level}} level<br/>
-<!-- Professor: {{teach.professor}}. -->
-
-</li>
+{% set semesters = semesters.append(teach.semester + " Semester " + teach.year) %}
 {% endfor %}
-</ul>
+
+{% for semester in semesters|unique %}
+{% set semester_id = loop.index %}
+
+<p>
+<details>
+    <summary>{{ semester }}</summary>
+    <ul>
+    	{% for teach in teaching_assistant %}
+		{% if teach.semester + " Semester " + teach.year == semester %}
+        <li>
+		{{teach.place}} ({{teach.city}}, {{teach.country}})     <br/>
+		{{teach.code}}: {{teach.course}}. {{teach.level}} level <br/>
+		</li>
+		{% endif %}
+		{% endfor %}
+    </ul>
+</details>
 </p>
+{% endfor %}
 
 </div>  <!-- end of section -->
-
 
 {% endblock %}

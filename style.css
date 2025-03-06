@@ -115,3 +115,34 @@ HR {
   font-family: "Lato";
   margin-bottom: 2.3em;
 }
+
+/* Toggle content */
+
+/* Hiddes checkbox */
+input[type="checkbox"] {
+    display: none;
+}
+
+/* Style of the label */
+label {
+    cursor: pointer;
+    color: #0000EE;
+}
+
+/* Hidde content by default */
+.content {
+    display: none;
+}
+
+/* Show content when checkbox is marked */
+input[type="checkbox"]:checked + .content {
+    display: block;
+}
+
+summary {
+    cursor: pointer;
+    color: #0000EE;
+}
+
+details[open] summary {
+}

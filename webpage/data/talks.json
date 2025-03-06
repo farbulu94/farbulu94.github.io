@@ -6,7 +6,8 @@
   "country": "France",
   "name": "Workshop ANR IZES",
   "title": "The Jacobs-Keane theorem from the \\(\\mathcal{S}\\)-adic viewpoint",
-  "website": "https://izes.math.cnrs.fr"
+  "website": "https://izes.math.cnrs.fr",
+  "type": "conference"
  },
   {
   "date": "2024-05-13",
@@ -15,7 +16,8 @@
   "country": "The Netherlands",
   "name": "Dynamics on zero-dimensional spaces: new connections",
   "title": "The Jacobs-Keane theorem from the \\(\\mathcal{S}\\)-adic viewpoint",
-  "website": "https://www.lorentzcenter.nl/dynamics-on-zero-dimensional-spaces-new-connections.html"
+  "website": "https://www.lorentzcenter.nl/dynamics-on-zero-dimensional-spaces-new-connections.html",
+  "type": "conference"
  },
  {
   "date": "2023-07-07",
@@ -24,7 +26,8 @@
   "country": "France",
   "name": "Dyadisc 6. Dynamics on the Cantor set and applications",
   "title": "Dynamical properties of minimal Ferenczi subshifts",
-  "website": "https://dyadisc6.sciencesconf.org/"
+  "website": "https://dyadisc6.sciencesconf.org/",
+  "type": "conference"
  },
  {
   "date": "2023-05-31",
@@ -33,7 +36,8 @@
   "country": "Belgium",
   "name": "Séminaire de Mathématiques discrètes",
   "title": "Dynamical properties of minimal Ferenczi subshifts",
-  "website": "https://www.mathematics.uliege.be/cms/c_4179137/fr/mathematics"
+  "website": "https://www.mathematics.uliege.be/cms/c_4179137/fr/mathematics",
+  "type": "seminar"
  },
  {
   "date": "2023-02-02",
@@ -42,7 +46,8 @@
   "country": "France",
   "name": "Séminaire equipe ADA",
   "title": "Dynamical properties of minimal Ferenczi subshifts",
-  "website": "https://lmpa.univ-littoral.fr/index.php?page_id=10"
+  "website": "https://lmpa.univ-littoral.fr/index.php?page_id=10",
+  "type": "seminar"
  },
  {
   "date": "2023-01-10",
@@ -51,7 +56,8 @@
   "country": "France",
   "name": "Séminaire Ernest",
   "title": "Dynamical properties of minimal Ferenczi subshifts",
-  "website": "https://www.i2m.univ-amu.fr/agenda/seminaires/seminaire-ernest/"
+  "website": "https://www.i2m.univ-amu.fr/agenda/seminaires/seminaire-ernest/",
+  "type": "seminar"
  },
  {
   "date": "2022-06-17",
@@ -60,7 +66,8 @@
   "country": "Belgium",
   "name": "Dyadisc 5. \\(\\mathcal{S}\\)-adicity",
   "title": "Dynamical properties of minimal Ferenczi subshifts",
-  "website": "https://dyadisc5.sciencesconf.org/"
+  "website": "https://dyadisc5.sciencesconf.org/",
+  "type": "conference"
  },
  {
   "date": "2021-11-29",
@@ -69,7 +76,8 @@
   "country": "France",
   "name": "SDA-2. Systèmes dynamiques, automates et algorithmes",
   "title": "Dynamical properties of symbolic rank one subshifts",
-  "website": "https://sda2-2021.sciencesconf.org/"
+  "website": "https://sda2-2021.sciencesconf.org/",
+  "type": "conference"
  },
  {
  "title": "Dynamical properties of symbolic rank one systems",
@@ -78,6 +86,7 @@
  "country": "France",
  "place": "LAMFA",
  "name": "Séminaire Dynamique et Probabilités",
- "website": "https://www.lamfa.u-picardie.fr/seminaires-colloques/article/seminaire-dynamique-et-probabilites"
+ "website": "https://www.lamfa.u-picardie.fr/seminaires-colloques/article/seminaire-dynamique-et-probabilites",
+ "type": "seminar"
  }
 ]

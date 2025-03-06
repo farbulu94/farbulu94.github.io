@@ -1,25 +1,113 @@
 [
-  {
- "course": "Differential and Riemannian Geometry",
- "code": "MA5112",
- "year": "2017",
- "semester": "1st",
- "place": "Department of Mathematical Engineering, Faculty of Mathematical and Physical Sciences",
- "country": "Chile",
- "city": "Santiago",
- "professor": "Fethi Mahmoudi",
- "level": "Graduate"
+ {
+ "course": "Systèmes dynamiques",
+ "code": "M1S2",
+ "year": "2025",
+ "semester": "2nd",
+ "place": "Université de Picardie Jules Verne",
+ "country": "France",
+ "city": "Amiens",
+ "level": "Master"
  },
  {
- "course": "Differential and Riemannian Geometry",
- "code": "MA5112",
- "year": "2018",
+ "course": "Modélisation aléatoire",
+ "code": "M1S2",
+ "year": "2025",
+ "semester": "2nd",
+ "place": "Université de Picardie Jules Verne",
+ "country": "France",
+ "city": "Amiens",
+ "level": "Master"
+ },
+ {
+ "course": "Analyse réelle appliquée",
+ "code": "L1S2",
+ "year": "2025",
+ "semester": "2nd",
+ "place": "Université de Picardie Jules Verne",
+ "country": "France",
+ "city": "Amiens",
+ "level": "Undergraduate"
+ },
+ {
+ "course": "Analyse réelle fondamentale",
+ "code": "L1S2",
+ "year": "2025",
+ "semester": "2nd",
+ "place": "Université de Picardie Jules Verne",
+ "country": "France",
+ "city": "Amiens",
+ "level": "Undergraduate"
+ },
+ {
+ "course": "Probabilités et statistique",
+ "code": "L1S2",
+ "year": "2025",
+ "semester": "2nd",
+ "place": "Université de Picardie Jules Verne",
+ "country": "France",
+ "city": "Amiens",
+ "level": "Undergraduate"
+ },
+ {
+ "course": "Méthodes et Techniques de Calcul",
+ "code": "L1S1",
+ "year": "2024",
  "semester": "1st",
- "place": "Department of Mathematical Engineering, Faculty of Mathematical and Physical Sciences",
- "country": "Chile",
- "city": "Santiago",
- "professor": "Fethi Mahmoudi",
- "level": "Graduate"
+ "place": "Université de Picardie Jules Verne",
+ "country": "France",
+ "city": "Amiens",
+ "level": "Undergraduate"
+ },
+ {
+ "course": "Systèmes dynamiques",
+ "code": "M1S2",
+ "year": "2024",
+ "semester": "2nd",
+ "place": "Université de Picardie Jules Verne",
+ "country": "France",
+ "city": "Amiens",
+ "level": "Master"
+ },
+ {
+ "course": "Modélisation aléatoire",
+ "code": "M1S2",
+ "year": "2024",
+ "semester": "2nd",
+ "place": "Université de Picardie Jules Verne",
+ "country": "France",
+ "city": "Amiens",
+ "level": "Master"
+ },
+ {
+ "course": "Analyse réelle appliquée",
+ "code": "L1S2",
+ "year": "2024",
+ "semester": "2nd",
+ "place": "Université de Picardie Jules Verne",
+ "country": "France",
+ "city": "Amiens",
+ "level": "Undergraduate"
+ },
+ {
+ "course": "Analyse réelle fondamentale",
+ "code": "L1S2",
+ "year": "2024",
+ "semester": "2nd",
+ "place": "Université de Picardie Jules Verne",
+ "country": "France",
+ "city": "Amiens",
+ "level": "Undergraduate"
+ },
+ {
+ "course": "Probabilités et statistique",
+ "code": "L1S2",
+ "year": "2024",
+ "semester": "2nd",
+ "place": "Université de Picardie Jules Verne",
+ "country": "France",
+ "city": "Amiens",
+ "level": "Undergraduate"
  },
  {
  "course": "Méthodes et Techniques de Calcul",
@@ -32,113 +120,25 @@
  "level": "Undergraduate"
  },
  {
- "course": "Probabilités et statistique",
- "code": "L1S2",
- "year": "2024",
- "semester": "2nd",
- "place": "Université de Picardie Jules Verne",
- "country": "France",
- "city": "Amiens",
- "level": "Undergraduate"
- },
- {
- "course": "Analyse réelle fondamentale",
- "code": "L1S2",
- "year": "2024",
- "semester": "2nd",
- "place": "Université de Picardie Jules Verne",
- "country": "France",
- "city": "Amiens",
- "level": "Undergraduate"
- },
- {
- "course": "Analyse réelle appliquée",
- "code": "L1S2",
- "year": "2024",
- "semester": "2nd",
- "place": "Université de Picardie Jules Verne",
- "country": "France",
- "city": "Amiens",
- "level": "Undergraduate"
- },
- {
- "course": "Modélisation aléatoire",
- "code": "L1S2",
- "year": "2024",
- "semester": "2nd",
- "place": "Université de Picardie Jules Verne",
- "country": "France",
- "city": "Amiens",
- "level": "Master"
- },
- {
- "course": "Systèmes dynamiques",
- "code": "L1S2",
- "year": "2024",
- "semester": "2nd",
- "place": "Université de Picardie Jules Verne",
- "country": "France",
- "city": "Amiens",
- "level": "Master"
- },
- {
- "course": "Méthodes et Techniques de Calcul",
- "code": "L1S1",
- "year": "2024",
+ "course": "Differential and Riemannian Geometry",
+ "code": "MA5112",
+ "year": "2018",
  "semester": "1st",
- "place": "Université de Picardie Jules Verne",
- "country": "France",
- "city": "Amiens",
- "level": "Undergraduate"
+ "place": "Faculty of Mathematical and Physical Sciences",
+ "country": "Chile",
+ "city": "Santiago",
+ "professor": "Fethi Mahmoudi",
+ "level": "Graduate"
  },
  {
- "course": "Probabilités et statistique",
- "code": "L1S2",
- "year": "2025",
- "semester": "2nd",
- "place": "Université de Picardie Jules Verne",
- "country": "France",
- "city": "Amiens",
- "level": "Undergraduate"
- },
- {
- "course": "Analyse réelle fondamentale",
- "code": "L1S2",
- "year": "2025",
- "semester": "2nd",
- "place": "Université de Picardie Jules Verne",
- "country": "France",
- "city": "Amiens",
- "level": "Undergraduate"
- },
- {
- "course": "Analyse réelle appliquée",
- "code": "L1S2",
- "year": "2025",
- "semester": "2nd",
- "place": "Université de Picardie Jules Verne",
- "country": "France",
- "city": "Amiens",
- "level": "Undergraduate"
- },
- {
- "course": "Modélisation aléatoire",
- "code": "L1S2",
- "year": "2025",
- "semester": "2nd",
- "place": "Université de Picardie Jules Verne",
- "country": "France",
- "city": "Amiens",
- "level": "Master"
- },
- {
- "course": "Systèmes dynamiques",
- "code": "L1S2",
- "year": "2025",
- "semester": "2nd",
- "place": "Université de Picardie Jules Verne",
- "country": "France",
- "city": "Amiens",
- "level": "Master"
+ "course": "Differential and Riemannian Geometry",
+ "code": "MA5112",
+ "year": "2017",
+ "semester": "1st",
+ "place": "Faculty of Mathematical and Physical Sciences",
+ "country": "Chile",
+ "city": "Santiago",
+ "professor": "Fethi Mahmoudi",
+ "level": "Graduate"
  }
 ]

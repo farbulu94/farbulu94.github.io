@@ -20,11 +20,20 @@
 {% endif %}
 ({{ pub["year"] }})
 {% if pub.pages %}
-p. {{ pub.pages[0]}}-{{ pub.pages[1] }}
+pp. {{ pub.pages[0]}}-{{ pub.pages[1] }}
 {% endif %}
 {% if pub.website %}
 </a>
 {% endif %}
+</journal>
+<br/>
+{% endif %}
+{%- endmacro %}
+
+{% macro publication_doi(doi) %}
+{% if doi %}
+<journal>
+<a href="https://doi.org/{{ doi }}">doi:{{ doi }}</a>
 </journal>
 <br/>
 {% endif %}
@@ -57,6 +66,7 @@ p. {{ pub.pages[0]}}-{{ pub.pages[1] }}
 <br/>
 
 {{ publication_journal(pub, journals) }}
+{{ publication_doi(pub.doi) }}
 {{ publication_arxiv(pub.arxiv) }}
 
 {% if pub.abstract %}

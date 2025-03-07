@@ -26,7 +26,7 @@ env = Environment(loader=PackageLoader('webpage', 'templates'))
 DATA_DIR = 'webpage/data/'
 ARTICLES_DIR = 'webpage/articles/'
 STATIC_DIR = 'webpage/static/'
-OUTPUT_DIR = 'output/'
+OUTPUT_DIR = ''
 
 #TODO: implement timestamps for everything using a dependency mechanism !!
 
@@ -88,27 +88,33 @@ for page in pages:
     page['last_update'] = date_today
 
 # computing time stamps
+# for page in pages:
+#     page['status'] = 'unselected'
+#     filename = os.path.join(OUTPUT_DIR, page['link'])
+#     template = os.path.join('webpage', 'templates', page['link'])
+#     page['mtime_template'] = os.path.getmtime(template)
+#     try:
+#         page['mtime_output'] = os.path.getmtime(filename)
+#     except OSError:
+#         page['mtime_output'] = 0.0
+
 for page in pages:
+    # if page['mtime_output'] < max(page['mtime_template'], mtime_data):
+    #     print(u"Generate {}".format(page['name']))
+    #     template = env.get_template(page['template'])
+    #     filename = os.path.join('output', page['template'])
+    #     page['status'] = 'selected'
+    #     with codecs.open(filename, "w", encoding='utf-8') as output:
+    #         output.write(template.render(pages=pages, **data))
+    #     page['status'] = 'unselected'
+    # else:
+    #     print(u"Skip {} because already up to date".format(page['name']))
+    print(u"Generate {}".format(page['name']))
+    template = env.get_template(page['template'])
+    filename = os.path.join('', page['template'])
+    page['status'] = 'selected'
+    with codecs.open(filename, "w", encoding='utf-8') as output:
+        output.write(template.render(pages=pages, **data))
     page['status'] = 'unselected'
-    filename = os.path.join(OUTPUT_DIR, page['link'])
-    template = os.path.join('webpage', 'templates', page['link'])
-    page['mtime_template'] = os.path.getmtime(template)
-    try:
-        page['mtime_output'] = os.path.getmtime(filename)
-    except OSError:
-        page['mtime_output'] = 0.0
-
-for page in pages:
-    if page['mtime_output'] < max(page['mtime_template'], mtime_data):
-        print(u"Generate {}".format(page['name']))
-
-        template = env.get_template(page['template'])
-        filename = os.path.join('output', page['template'])
-        page['status'] = 'selected'
-        with codecs.open(filename, "w", encoding='utf-8') as output:
-            output.write(template.render(pages=pages, **data))
-        page['status'] = 'unselected'
-    else:
-        print(u"Skip {} because already up to date".format(page['name']))
 
 page['status'] = 'selected'  # reselect the blog !!

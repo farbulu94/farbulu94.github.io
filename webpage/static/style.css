@@ -60,8 +60,8 @@ HR {
 }
 
 #menu ul{
-  line-height: 3em;
-  padding-left: .5em;
+  line-height: 2em;
+  padding-left: .2em;
 }
 
 #menu ul li{
@@ -72,11 +72,10 @@ HR {
 #menu a {
   color: #0000EE;
   background: #EAECEE ;
-  padding-top: .8em;
-  margin-top: 1em;
-  padding-bottom: .8em;
-  padding-left: .8em;
-  padding-right: .8em;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  padding-left: .5em;
+  padding-right: .5em;
 }
 
 #menu .selected a {

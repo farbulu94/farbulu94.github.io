@@ -1,5 +1,7 @@
 body {
   font-family: "Lato";
+  margin-right: 10%;
+  margin-left:  10%;
 }
 
 HR {
@@ -46,19 +48,20 @@ HR {
 
 #title {
   font-family: 'Roboto Slab';
+  padding-left: .5em;
 }
-
 
 #top{
 }
 
 #left{
   float:left;
-  width: 60%;
+  width: 100%;
 }
 
 #menu ul{
   line-height: 3em;
+  padding-left: .5em;
 }
 
 #menu ul li{
@@ -72,8 +75,8 @@ HR {
   padding-top: .8em;
   margin-top: 1em;
   padding-bottom: .8em;
-  padding-left: .5em;
-  padding-right: .5em;
+  padding-left: .8em;
+  padding-right: .8em;
 }
 
 #menu .selected a {
@@ -92,9 +95,8 @@ HR {
 }
 
 #main{
-  margin-top: 50px;
-  margin-left: 25px;
-  margin-bottom: 50px;
+  margin-top: 1%;
+  margin-bottom: 1%;
 }
 
 #bottom{
@@ -106,8 +108,8 @@ HR {
   font-family: "Lato";
   line-height: 1.5;
   margin-bottom: 2em;
-  padding-left: 2em;
-  padding-right: 2em;
+  padding-left:  .5em;
+  padding-right: .5em;
   text-align: justify;
 }
 

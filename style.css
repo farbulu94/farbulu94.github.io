@@ -38,12 +38,19 @@ HR {
 }
 .publi pages{
 }
-.publi abstract{
-  font-style: italic;
-  color: #244052;
+abstract {
+  display: block;
+}
+.publi abstract {
+  background-color: #EAECEE;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: .5em;
+  margin-bottom: .5em;
+  padding: 2%;
 }
 .publi abstract a {
-  color: #903030;
+  color: #F00000;
 }
 
 #title {

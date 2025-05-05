@@ -5,7 +5,7 @@
   "city": "Porquerolles",
   "country": "France",
   "name": "Workshop ANR IZES",
-  "title": "The Jacobs-Keane theorem from the \\(\\mathcal{S}\\)-adic viewpoint",
+  "title": "The Jacobs–Keane theorem from the \\(\\mathcal{S}\\)-adic viewpoint",
   "website": "https://izes.math.cnrs.fr",
   "type": "conference"
  },
@@ -15,7 +15,7 @@
   "city": "Leiden",
   "country": "The Netherlands",
   "name": "Dynamics on zero-dimensional spaces: new connections",
-  "title": "The Jacobs-Keane theorem from the \\(\\mathcal{S}\\)-adic viewpoint",
+  "title": "The Jacobs–Keane theorem from the \\(\\mathcal{S}\\)-adic viewpoint",
   "website": "https://www.lorentzcenter.nl/dynamics-on-zero-dimensional-spaces-new-connections.html",
   "type": "conference"
  },
@@ -28,6 +28,16 @@
   "title": "Dynamical properties of minimal Ferenczi subshifts",
   "website": "https://dyadisc6.sciencesconf.org/",
   "type": "conference"
+ },
+ {
+  "date": "2025-04-11",
+  "place": "BME Budapest",
+  "city": "Budapest",
+  "country": "Hungary",
+  "name": "The Budapest-Wien Dynamics Seminar",
+  "title": "Spectral analysis of some classes of \\(\\mathcal{S}\\)-adic subshifts",
+  "website": "https://mathematik.univie.ac.at/forschung/seminare/the-budapest-wien-dynamics-seminar/",
+  "type": "seminar"
  },
  {
   "date": "2023-05-31",

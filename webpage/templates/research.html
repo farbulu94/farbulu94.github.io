@@ -24,9 +24,6 @@ with {% for author in coauthors[:-2] %}{{ author }}, {% endfor %} {{coauthors[-2
 {% macro publication_journal(pub, journals) %}
 {% if pub.journal %}
 <journal>
-{% if pub.website %}
-<a href="{{ pub.website }}">
-{% endif %}
 {{ journals[pub.journal]['full-name'] }}
 {{ pub.volume }}
 {% if pub.issue %}
@@ -34,10 +31,7 @@ with {% for author in coauthors[:-2] %}{{ author }}, {% endfor %} {{coauthors[-2
 {% endif %}
 ({{ pub["year"] }})
 {% if pub.pages %}
-pp. {{ pub.pages[0]}}-{{ pub.pages[1] }}
-{% endif %}
-{% if pub.website %}
-</a>
+pp. {{ pub.pages[0]}}–{{ pub.pages[1] }}
 {% endif %}
 </journal>
 <br/>
@@ -155,14 +149,7 @@ Abstract.
 
 <titre>"{{ pub.title }}"</titre>
 <br/>
-
-{% if pub.website %}
-<a href="{{ pub.website }}">
-{% endif %}
 {{ pub.name }}
-{% if pub.website %}
-</a>
-{% endif %}
 <br/>
 
 {{ publication_journal(pub, journals) }}

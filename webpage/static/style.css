@@ -74,7 +74,7 @@ abstract {
 #menu ul{
   line-height: 2em;
   padding-left: .2em;
-  width: 50%
+  width: 100%
 }
 
 #menu ul li{
@@ -163,8 +163,9 @@ details[open] summary {
 }
 
 @media only screen and (max-width: 850px) {
-  #menu ul li{
-  display: grid;
+  #menu ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 

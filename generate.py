@@ -79,6 +79,7 @@ pages = [
    {'link': 'research.html', 'name': u'Research', 'template': 'research.html'},
    {'link': 'teaching.html', 'name': u'Teaching', 'template': 'teaching.html'},
    {'link': 'CV.html', 'name': u'CV', 'template': 'CV.html'},
+   {'link': 'olympiads.html', 'name': u'Math Olympiads', 'template': 'olympiads.html'},
    {'link': 'contact.html', 'name': u'Contact', 'template': 'contact.html'},
    ]
 

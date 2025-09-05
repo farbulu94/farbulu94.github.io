@@ -1,5 +1,15 @@
 [
  {
+ "course": "Méthodes et Techniques de Calcul",
+ "code": "L1S1",
+ "year": "2026",
+ "semester": "1st",
+ "place": "Université de Picardie Jules Verne",
+ "country": "France",
+ "city": "Amiens",
+ "level": "Undergraduate"
+ },
+ {
  "course": "Systèmes dynamiques",
  "code": "M1S2",
  "year": "2025",

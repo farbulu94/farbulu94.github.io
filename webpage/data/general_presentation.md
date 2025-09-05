@@ -1,4 +1,3 @@
-I am an Attaché Temporaire d'Enseignement et de Recherche (ATER) at the [Université de Picardie Jules Verne](https://www.u-picardie.fr/). <br/>
-I was previously a PhD student working under the supervision of [Fabien Durand](https://www.lamfa.u-picardie.fr/fdurand/) and a [LAMFA](https://www.lamfa.u-picardie.fr/) member. <br/>
-I obtained the PhD degree with mention in mathematics in December 2024. <br/>
+I am a Postdoctoral Researcher at the [Laboratoire Amiénois de Mathématique Fondamentale et Appliquée (LAMFA)](https://www.lamfa.u-picardie.fr/) of the [Université de Picardie Jules Verne](https://www.u-picardie.fr/). <br/>
+I was previously an Attaché Temporaire d'Enseignement et de Recherche (ATER) and a PhD student at the [Université de Picardie Jules Verne](https://www.u-picardie.fr/). <br/>
 Before that, I earned the degree of Mathematical Engineer at the [Faculty of Mathematical and Physical Sciences of the University of Chile](https://ingenieria.uchile.cl/) and the Master 2 degree in Mathematics at [Université Paris-Saclay](https://www.universite-paris-saclay.fr/). <br/>

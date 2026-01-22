@@ -1,5 +1,15 @@
 [
  {
+ "course": "Analyse réelle fondamentale",
+ "code": "L1S2",
+ "year": "2026",
+ "semester": "2nd",
+ "place": "Université de Picardie Jules Verne",
+ "country": "France",
+ "city": "Amiens",
+ "level": "Undergraduate"
+ },
+ {
  "course": "Méthodes et Techniques de Calcul",
  "code": "L1S1",
  "year": "2026",

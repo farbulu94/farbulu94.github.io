@@ -30,6 +30,16 @@
   "type": "conference"
  },
  {
+  "date": "2025-11-06",
+  "place": "Institut Fourier",
+  "city": "Grenoble",
+  "country": "France",
+  "name": "Séminaire de Théorie Spectrale et Géométrie",
+  "title": "Analyse spectrale de certaines classes de sous-shifts \\(\\mathcal{S}\\)-adiques",
+  "website": "https://sites.google.com/view/seminaire-tsg",
+  "type": "seminar"
+ },
+ {
   "date": "2025-04-11",
   "place": "BME Budapest",
   "city": "Budapest",

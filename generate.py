@@ -34,7 +34,7 @@ re_sage_code = re.compile('    :::pycon')
 
 # Update
 
-date_today = datetime.datetime.now().strftime("%y/%m/%d")
+date_today = datetime.datetime.now().strftime("%Y/%m/%d")
 
 # copy files from the static dir that are not already in the output one
 for name in os.listdir(STATIC_DIR):

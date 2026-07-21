@@ -1,103 +1,162 @@
 {% extends "base.html" %}
 
-{% macro publication_coauthors(coauthors) %}
-{% if coauthors %}
-{% if coauthors|length == 1 %}
-<auteurs>
-with {{coauthors[0]}}
-</auteurs>
-{% endif %}
-{% if coauthors|length == 2 %}
-<auteurs>
-with {{coauthors[0]}} and {{coauthors[1]}}
-</auteurs>
-{% endif %}
-{% if coauthors|length > 2%}
-<auteurs>
-with {% for author in coauthors[:-2] %}{{ author }}, {% endfor %} {{coauthors[-2]}} and {{coauthors[-1]}}
-</auteurs>
-{% endif %}
-<br/>
-{% endif %}
+{% macro author_link(name, website) -%}
+{%- if website -%}
+<a href="{{ website }}" class="research-link">{{ name }}</a>
+{%- else -%}
+<span class="research-author-no-link">{{ name }}</span>
+{%- endif -%}
+{%- endmacro %}
+
+{% macro publication_coauthors(coauthors, websites) -%}
+{%- if coauthors -%}
+<auteurs>with{{ " " }}{%- if coauthors|length == 1 -%}
+{{ author_link(coauthors[0], websites[0] if websites and websites|length > 0 else none) }}
+{%- elif coauthors|length == 2 -%}
+{{ author_link(coauthors[0], websites[0] if websites and websites|length > 0 else none) }} and {{ author_link(coauthors[1], websites[1] if websites and websites|length > 1 else none) }}
+{%- else -%}
+{%- for author in coauthors -%}
+{{ author_link(author, websites[loop.index0] if websites and websites|length > loop.index0 else none) }}{%- if not loop.last -%}{%- if loop.index == coauthors|length - 1 %} and {% else %}, {% endif -%}{%- endif -%}
+{%- endfor -%}
+{%- endif -%}
+</auteurs><span class="research-period">.</span><br/>
+{%- endif -%}
 {%- endmacro %}
 
 {% macro publication_journal(pub, journals) %}
 {% if pub.journal %}
 <journal>
 {{ journals[pub.journal]['full-name'] }}
-{{ pub.volume }}
-{% if pub.issue %}
-, n° {{ pub["issue"] }}
-{% endif %}
+{{ pub.volume }}{% if pub.issue %}. {{ pub.issue }}{% endif %}
 ({{ pub["year"] }})
 {% if pub.pages %}
-pp. {{ pub.pages[0]}}–{{ pub.pages[1] }}
+pp. {{ pub.pages[0] }}–{{ pub.pages[1] }}
 {% endif %}
 </journal>
 <br/>
 {% endif %}
 {%- endmacro %}
 
-{% macro publication_doi(doi) %}
-{% if doi %}
-<journal>
-<a href="https://doi.org/{{ doi }}">doi:{{ doi }}</a>
-</journal>
-<br/>
-{% endif %}
+{% macro toggle_button(toggle_id, text) %}
+<label for="{{ toggle_id }}" class="research-button">{{ text }}</label>
 {%- endmacro %}
-
-{% macro publication_arxiv(arxiv) %}
-{% if arxiv %}
-<journal>
-<a href="http://arxiv.org/abs/{{ arxiv }}">arXiv:{{ arxiv }}</a>
-</journal>
-<br/>
-{% endif %}
-{%- endmacro %}
-
 
 {% block title %}Research{% endblock %}
 {% block body %}
 
-<!-- Publications section -->
+<style>
+.research-link,
+.research-link:link,
+.research-link:visited,
+.research-link:hover,
+.research-link:active {
+  color: #0000EE !important;
+  font-weight: normal !important;
+  text-decoration: none;
+}
+
+.research-author-no-link {
+  color: inherit !important;
+  font-weight: normal !important;
+  text-decoration: none;
+}
+
+.research-button,
+.research-button:link,
+.research-button:visited,
+.research-button:hover,
+.research-button:active {
+  color: #0000EE !important;
+  font-weight: bold !important;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.research-period,
+.research-separator {
+  color: black;
+  font-weight: normal;
+}
+
+.research-toggle {
+  display: none;
+}
+
+.research-content {
+  display: none;
+  margin-top: 0.5em;
+  padding: 1em 1.25em;
+  background: #EAECEE;
+  font-size: inherit !important;
+  line-height: inherit;
+}
+
+.research-content abstract,
+.research-content tt {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent !important;
+  font-size: inherit !important;
+  line-height: inherit;
+}
+
+.research-toggle:checked + .research-content {
+  display: block;
+}
+
+.bibtex-content tt {
+  font-family: monospace;
+  font-size: 1em !important;
+  line-height: inherit;
+  white-space: pre-wrap;
+}
+</style>
 
 <div class="section">
 <h2>Publications</h2>
 <p>
 <ol reversed="true" class="publi">
 {% for pub in publications %}
-{% set abs_id = loop.index %}
+{% set abstract_id = "publication-abstract-" ~ loop.index %}
+{% set bibtex_id = "publication-bibtex-" ~ loop.index %}
 <li>
 
-{{ publication_coauthors(pub.coauthors) }}
+{{ publication_coauthors(pub.coauthors, pub.websites) }}
 <titre>"{{ pub.title }}"</titre>
 <br/>
 
 {{ publication_journal(pub, journals) }}
-{{ publication_doi(pub.doi) }}
-{{ publication_arxiv(pub.arxiv) }}
+
+{% set buttons = [] %}
+{% if pub.abstract %}{% set _ = buttons.append(("toggle", abstract_id, "Abstract")) %}{% endif %}
+{% if pub.doi %}{% set _ = buttons.append(("link", "https://doi.org/" ~ pub.doi, "Journal")) %}{% endif %}
+{% if pub.arxiv %}{% set _ = buttons.append(("link", "https://arxiv.org/abs/" ~ pub.arxiv, "Postprint")) %}{% endif %}
+{% if pub.bibtex %}{% set _ = buttons.append(("toggle", bibtex_id, "BibTeX")) %}{% endif %}
+{% for kind, target, text in buttons %}
+{% if kind == "toggle" %}{{ toggle_button(target, text) }}{% else %}<a href="{{ target }}" class="research-button">{{ text }}</a>{% endif %}<span class="research-separator">.</span>{% if not loop.last %} {% endif %}
+{% endfor %}
 
 {% if pub.abstract %}
-<label for={{abs_id}}>
-Abstract.
-</label>
-
-<input type="checkbox" id={{abs_id}}>
-
-<a class="content">
-  <abstract>
-  {{ pub.abstract }}
-  </abstract>
-</a>
+<input type="checkbox" id="{{ abstract_id }}" class="research-toggle">
+<div class="research-content">
+<abstract>{{ pub.abstract }}</abstract>
+</div>
 {% endif %}
+
+{% if pub.bibtex %}
+<input type="checkbox" id="{{ bibtex_id }}" class="research-toggle">
+<div class="research-content bibtex-content">
+<tt>{{ pub.bibtex }}</tt>
+</div>
+{% endif %}
+
 </li>
 {% endfor %}
 </ol>
 </p>
 </div>
-
-<!-- Preprints section -->
 
 {% if prepublications|length > 0 %}
 
@@ -106,28 +165,34 @@ Abstract.
 <p>
 <ul class="publi">
 {% for pub in prepublications %}
-{% set abs_id = loop.index %}
+{% set abstract_id = "prepublication-abstract-" ~ loop.index %}
+{% set bibtex_id = "prepublication-bibtex-" ~ loop.index %}
 <li>
 
-{{ publication_coauthors(pub.coauthors) }}
-
+{{ publication_coauthors(pub.coauthors, pub.websites) }}
 <titre>"{{ pub.title }}"</titre>
 <br/>
 
-{{ publication_arxiv(pub.arxiv) }}
+{% set buttons = [] %}
+{% if pub.abstract %}{% set _ = buttons.append(("toggle", abstract_id, "Abstract")) %}{% endif %}
+{% if pub.arxiv %}{% set _ = buttons.append(("link", "https://arxiv.org/abs/" ~ pub.arxiv, "Preprint")) %}{% endif %}
+{% if pub.bibtex %}{% set _ = buttons.append(("toggle", bibtex_id, "BibTeX")) %}{% endif %}
+{% for kind, target, text in buttons %}
+{% if kind == "toggle" %}{{ toggle_button(target, text) }}{% else %}<a href="{{ target }}" class="research-button">{{ text }}</a>{% endif %}<span class="research-separator">.</span>{% if not loop.last %} {% endif %}
+{% endfor %}
 
 {% if pub.abstract %}
-<label for={{abs_id}}>
-Abstract.
-</label>
+<input type="checkbox" id="{{ abstract_id }}" class="research-toggle">
+<div class="research-content">
+<abstract>{{ pub.abstract }}</abstract>
+</div>
+{% endif %}
 
-<input type="checkbox" id={{abs_id}}>
-
-<a class="content">
-  <abstract>
-  {{ pub.abstract }}
-  </abstract>
-</a>
+{% if pub.bibtex %}
+<input type="checkbox" id="{{ bibtex_id }}" class="research-toggle">
+<div class="research-content bibtex-content">
+<tt>{{ pub.bibtex }}</tt>
+</div>
 {% endif %}
 
 </li>
@@ -138,104 +203,39 @@ Abstract.
 
 {% endif %}
 
-<!-- Conference articles -->
-
-<!-- <div class="section">
-<h2>Conference articles</h2>
-<ol reversed="true" class="publi">
-{% for pub in conference_papers %}
-<li>
-{{ publication_coauthors(pub.coauthors) }}
-
-<titre>"{{ pub.title }}"</titre>
-<br/>
-{{ pub.name }}
-<br/>
-
-{{ publication_journal(pub, journals) }}
-
-{{ publication_arxiv(pub.arxiv) }}
-
-{% if pub.abstract %}
-<abstract>
-{{ pub.abstract }}
-</abstract>
-{% endif %}
-</li>
-{% endfor %}
-</ol>
-</p>
-</div> -->
-
-<!-- Talks in conferences -->
-
 <div class="section">
 <h2>Talks</h2>
 <p>
 <h3>Conferences</h3>
 {% for talk in talks %}
 {% if talk.type == "conference" %}
-
 <ul>
 <li>
-
 <titre>"{{ talk.title }}"</titre>
 <br/>
-
-<!-- TODO: put slides, if they are available -->
-
-<a href={{talk.website}}>{{ talk.name }} </a> <br/>
-{{ talk.date }}, {{talk.place }} ({{talk.city }}, {{talk.country}})
+<a href="{{ talk.website }}">{{ talk.name }}</a><br/>
+{{ talk.date }}, {{ talk.place }} ({{ talk.city }}, {{ talk.country }})
 <br/>
-
 </li>
 </ul>
 {% endif %}
 {% endfor %}
-</li>
 
 <h3>Seminars</h3>
 {% for talk in talks %}
 {% if talk.type == "seminar" %}
-
 <ul>
 <li>
-
 <titre>"{{ talk.title }}"</titre>
 <br/>
-
-<!-- TODO: put slides, if they are available -->
-
-<a href={{talk.website}}>{{ talk.name }} </a> <br/>
-{{ talk.date }}, {{talk.place }} ({{talk.city }}, {{talk.country}})
+<a href="{{ talk.website }}">{{ talk.name }}</a><br/>
+{{ talk.date }}, {{ talk.place }} ({{ talk.city }}, {{ talk.country }})
 <br/>
-
 </li>
 </ul>
 {% endif %}
 {% endfor %}
-</li>
 </p>
-
-</div>  <!-- end of section -->
-
-<!-- Thesis -->
-
-<!-- <div class="section">
-<h2>Thesis</h2>
-<p>
-Thesis
-</p>
-</div> -->
-
-<!-- Organization of conferences, ... -->
-
-<!-- <div class="section">
-<h2>Conferences</h2>
-<ul>
-  <li>An item</li>
-  <li>Another item</li>
-
-</div>  -->
+</div>
 
 {% endblock %}

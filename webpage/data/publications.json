@@ -1,22 +1,40 @@
 [
     {
    "doi": "10.3934/dcds.2024052",
-   "coauthors": ["F. Durand", "B. Espinoza"],
+   "coauthors": [
+        "F. Durand",
+        "B. Espinoza"
+    ],
+   "websites" : [
+        "https://www.lamfa.u-picardie.fr/fdurand/",
+        "https://sites.google.com/ug.uchile.cl/espinoza"
+    ],
    "title": "The Jacobs–Keane theorem from the \\(\\mathcal{S}\\)-adic viewpoint",
    "journal": "DCDS",
    "year": 2024,
    "pages": [3077, 3108],
+   "volume": 44,
+   "issue": 10,
    "arxiv": "2307.10663",
-   "abstract": "In the light of recent developments of the \\(\\mathcal{S}\\)-adic study of subshifts, we revisit, within this framework, a well-known result on Toeplitz subshifts due to Jacobs–Keane giving a sufficient combinatorial condition to ensure discrete spectrum. We show that the notion of coincidences, originally introduced in the '70s for the study of the discrete spectrum of substitution subshifts, together with the \\(\\mathcal{S}\\)-adic structure of the subshift allow to go deeper in the study of Toeplitz subshifts. We characterize spectral properties of the factor maps onto the maximal equicontinuous topological factors by means of coincidences density. We also provide an easy to check necessary and sufficient condition to ensure unique ergodicity for constant length \\(\\mathcal{S}\\)-adic subshifts."
+   "abstract": "In the light of recent developments of the \\(\\mathcal{S}\\)-adic study of subshifts, we revisit, within this framework, a well-known result on Toeplitz subshifts due to Jacobs–Keane giving a sufficient combinatorial condition to ensure discrete spectrum. We show that the notion of coincidences, originally introduced in the '70s for the study of the discrete spectrum of substitution subshifts, together with the \\(\\mathcal{S}\\)-adic structure of the subshift allow to go deeper in the study of Toeplitz subshifts. We characterize spectral properties of the factor maps onto the maximal equicontinuous topological factors by means of coincidences density. We also provide an easy to check necessary and sufficient condition to ensure unique ergodicity for constant length \\(\\mathcal{S}\\)-adic subshifts.",
+   "bibtex": "@article{arbuluJacobsKeane24,\n AUTHOR = Arbulú, Felipe and Durand, Fabien and Espinoza, Bastián},\n  TITLE = {The Jacobs–Keane theorem from the $\\mathcal{S}$-adic viewpoint}, \n YEAR = {2024},\n JOURNAL = {Discrete Contin. Dyn. Syst.},\n VOLUME = {44},\n NUMBER = {10},\n PAGES = {3077--3108},\n DOI = {10.3934/dcds.2024052}\n}"
   },
 	{
    "doi": "10.1017/etds.2023.7",
-   "coauthors": ["F. Durand"],
+   "coauthors": [
+        "F. Durand"
+    ],
+   "websites": [
+        "https://www.lamfa.u-picardie.fr/fdurand/"
+    ],
    "title": "Dynamical properties of minimal Ferenczi subshifts",
    "journal": "ETDS",
    "year": 2023,
+   "volume": 43,
+   "issue": 12,
    "pages": [3923, 3970],
    "arxiv": "2207.14097",
-   "abstract": "We provide an explicit \\(\\mathcal{S}\\)-adic representation of rank-one subshifts with bounded spacers and call the subshifts obtained in this way ‘minimal Ferenczi subshifts’. We aim to show that this approach is very convenient to study the dynamical behavior of rank-one systems. For instance, we compute their topological rank, the strong and the weak orbit equivalence class. We observe that they have an induced system that is a Toeplitz subshift having discrete spectrum. We also characterize continuous and non-continuous eigenvalues of minimal Ferenczi subshifts."
+   "abstract": "We provide an explicit \\(\\mathcal{S}\\)-adic representation of rank-one subshifts with bounded spacers and call the subshifts obtained in this way ‘minimal Ferenczi subshifts’. We aim to show that this approach is very convenient to study the dynamical behavior of rank-one systems. For instance, we compute their topological rank, the strong and the weak orbit equivalence class. We observe that they have an induced system that is a Toeplitz subshift having discrete spectrum. We also characterize continuous and non-continuous eigenvalues of minimal Ferenczi subshifts.",
+   "bibtex": "@article{arbuluFerencziSubshifts23,\n AUTHOR = Arbulú, Felipe and Durand, Fabien},\n  TITLE = {Dynamical properties of minimal Ferenczi subshifts}, \n YEAR = {2023},\n JOURNAL = {Ergodic Theory Dynam. Systems},\n VOLUME = {43},\n NUMBER = {12},\n PAGES = {3923--3970},\n DOI = {10.1017/etds.2023.7}\n}"  
   }
 ]

@@ -98,7 +98,75 @@ Contact
 <div id="main">
 
 
-<!-- Publications section -->
+<style>
+.research-link,
+.research-link:link,
+.research-link:visited,
+.research-link:hover,
+.research-link:active {
+  color: #0000EE !important;
+  font-weight: normal !important;
+  text-decoration: none;
+}
+
+.research-author-no-link {
+  color: inherit !important;
+  font-weight: normal !important;
+  text-decoration: none;
+}
+
+.research-button,
+.research-button:link,
+.research-button:visited,
+.research-button:hover,
+.research-button:active {
+  color: #0000EE !important;
+  font-weight: bold !important;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.research-period,
+.research-separator {
+  color: black;
+  font-weight: normal;
+}
+
+.research-toggle {
+  display: none;
+}
+
+.research-content {
+  display: none;
+  margin-top: 0.5em;
+  padding: 1em 1.25em;
+  background: #EAECEE;
+  font-size: inherit !important;
+  line-height: inherit;
+}
+
+.research-content abstract,
+.research-content tt {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent !important;
+  font-size: inherit !important;
+  line-height: inherit;
+}
+
+.research-toggle:checked + .research-content {
+  display: block;
+}
+
+.bibtex-content tt {
+  font-family: monospace;
+  font-size: 1em !important;
+  line-height: inherit;
+  white-space: pre-wrap;
+}
+</style>
 
 <div class="section">
 <h2>Publications</h2>
@@ -106,19 +174,10 @@ Contact
 <ol reversed="true" class="publi">
 
 
+
 <li>
 
-
-
-
-
-<auteurs>
-with F. Durand and B. Espinoza
-</auteurs>
-
-
-<br/>
-
+<auteurs>with <a href="https://www.lamfa.u-picardie.fr/fdurand/" class="research-link">F. Durand</a> and <a href="https://sites.google.com/ug.uchile.cl/espinoza" class="research-link">B. Espinoza</a></auteurs><span class="research-period">.</span><br/>
 <titre>"The Jacobs–Keane theorem from the \(\mathcal{S}\)-adic viewpoint"</titre>
 <br/>
 
@@ -126,8 +185,7 @@ with F. Durand and B. Espinoza
 
 <journal>
 Discrete and Continuous Dynamical Systems
-
-
+44. 10
 (2024)
 
 pp. 3077–3108
@@ -137,48 +195,52 @@ pp. 3077–3108
 
 
 
-<journal>
-<a href="https://doi.org/10.3934/dcds.2024052">doi:10.3934/dcds.2024052</a>
-</journal>
-<br/>
 
 
 
-<journal>
-<a href="http://arxiv.org/abs/2307.10663">arXiv:2307.10663</a>
-</journal>
-<br/>
 
 
 
-<label for=1>
-Abstract.
-</label>
+<label for="publication-abstract-1" class="research-button">Abstract</label><span class="research-separator">.</span> 
 
-<input type="checkbox" id=1>
+<a href="https://doi.org/10.3934/dcds.2024052" class="research-button">Journal</a><span class="research-separator">.</span> 
 
-<a class="content">
-  <abstract>
-  In the light of recent developments of the \(\mathcal{S}\)-adic study of subshifts, we revisit, within this framework, a well-known result on Toeplitz subshifts due to Jacobs–Keane giving a sufficient combinatorial condition to ensure discrete spectrum. We show that the notion of coincidences, originally introduced in the '70s for the study of the discrete spectrum of substitution subshifts, together with the \(\mathcal{S}\)-adic structure of the subshift allow to go deeper in the study of Toeplitz subshifts. We characterize spectral properties of the factor maps onto the maximal equicontinuous topological factors by means of coincidences density. We also provide an easy to check necessary and sufficient condition to ensure unique ergodicity for constant length \(\mathcal{S}\)-adic subshifts.
-  </abstract>
-</a>
+<a href="https://arxiv.org/abs/2307.10663" class="research-button">Postprint</a><span class="research-separator">.</span> 
+
+
+<label for="publication-bibtex-1" class="research-button">BibTeX</label><span class="research-separator">.</span>
+
+
+
+<input type="checkbox" id="publication-abstract-1" class="research-toggle">
+<div class="research-content">
+<abstract>In the light of recent developments of the \(\mathcal{S}\)-adic study of subshifts, we revisit, within this framework, a well-known result on Toeplitz subshifts due to Jacobs–Keane giving a sufficient combinatorial condition to ensure discrete spectrum. We show that the notion of coincidences, originally introduced in the '70s for the study of the discrete spectrum of substitution subshifts, together with the \(\mathcal{S}\)-adic structure of the subshift allow to go deeper in the study of Toeplitz subshifts. We characterize spectral properties of the factor maps onto the maximal equicontinuous topological factors by means of coincidences density. We also provide an easy to check necessary and sufficient condition to ensure unique ergodicity for constant length \(\mathcal{S}\)-adic subshifts.</abstract>
+</div>
+
+
+
+<input type="checkbox" id="publication-bibtex-1" class="research-toggle">
+<div class="research-content bibtex-content">
+<tt>@article{arbuluJacobsKeane24,
+ AUTHOR = Arbulú, Felipe and Durand, Fabien and Espinoza, Bastián},
+  TITLE = {The Jacobs–Keane theorem from the $\mathcal{S}$-adic viewpoint}, 
+ YEAR = {2024},
+ JOURNAL = {Discrete Contin. Dyn. Syst.},
+ VOLUME = {44},
+ NUMBER = {10},
+ PAGES = {3077--3108},
+ DOI = {10.3934/dcds.2024052}
+}</tt>
+</div>
+
 
 </li>
 
 
+
 <li>
 
-
-
-
-<auteurs>
-with F. Durand
-</auteurs>
-
-
-
-<br/>
-
+<auteurs>with <a href="https://www.lamfa.u-picardie.fr/fdurand/" class="research-link">F. Durand</a></auteurs><span class="research-period">.</span><br/>
 <titre>"Dynamical properties of minimal Ferenczi subshifts"</titre>
 <br/>
 
@@ -186,8 +248,7 @@ with F. Durand
 
 <journal>
 Ergodic Theory and Dynamical Systems
-
-
+43. 12
 (2023)
 
 pp. 3923–3970
@@ -197,31 +258,44 @@ pp. 3923–3970
 
 
 
-<journal>
-<a href="https://doi.org/10.1017/etds.2023.7">doi:10.1017/etds.2023.7</a>
-</journal>
-<br/>
 
 
 
-<journal>
-<a href="http://arxiv.org/abs/2207.14097">arXiv:2207.14097</a>
-</journal>
-<br/>
 
 
 
-<label for=2>
-Abstract.
-</label>
+<label for="publication-abstract-2" class="research-button">Abstract</label><span class="research-separator">.</span> 
 
-<input type="checkbox" id=2>
+<a href="https://doi.org/10.1017/etds.2023.7" class="research-button">Journal</a><span class="research-separator">.</span> 
 
-<a class="content">
-  <abstract>
-  We provide an explicit \(\mathcal{S}\)-adic representation of rank-one subshifts with bounded spacers and call the subshifts obtained in this way ‘minimal Ferenczi subshifts’. We aim to show that this approach is very convenient to study the dynamical behavior of rank-one systems. For instance, we compute their topological rank, the strong and the weak orbit equivalence class. We observe that they have an induced system that is a Toeplitz subshift having discrete spectrum. We also characterize continuous and non-continuous eigenvalues of minimal Ferenczi subshifts.
-  </abstract>
-</a>
+<a href="https://arxiv.org/abs/2207.14097" class="research-button">Postprint</a><span class="research-separator">.</span> 
+
+
+<label for="publication-bibtex-2" class="research-button">BibTeX</label><span class="research-separator">.</span>
+
+
+
+<input type="checkbox" id="publication-abstract-2" class="research-toggle">
+<div class="research-content">
+<abstract>We provide an explicit \(\mathcal{S}\)-adic representation of rank-one subshifts with bounded spacers and call the subshifts obtained in this way ‘minimal Ferenczi subshifts’. We aim to show that this approach is very convenient to study the dynamical behavior of rank-one systems. For instance, we compute their topological rank, the strong and the weak orbit equivalence class. We observe that they have an induced system that is a Toeplitz subshift having discrete spectrum. We also characterize continuous and non-continuous eigenvalues of minimal Ferenczi subshifts.</abstract>
+</div>
+
+
+
+<input type="checkbox" id="publication-bibtex-2" class="research-toggle">
+<div class="research-content bibtex-content">
+<tt>@article{arbuluFerencziSubshifts23,
+ AUTHOR = Arbulú, Felipe and Durand, Fabien},
+  TITLE = {Dynamical properties of minimal Ferenczi subshifts}, 
+ YEAR = {2023},
+ JOURNAL = {Ergodic Theory Dynam. Systems},
+ VOLUME = {43},
+ NUMBER = {12},
+ PAGES = {3923--3970},
+ DOI = {10.1017/etds.2023.7}
+}</tt>
+</div>
+
 
 </li>
 
@@ -229,21 +303,63 @@ Abstract.
 </p>
 </div>
 
-<!-- Preprints section -->
+
+
+<div class="section">
+<h2>Preprints</h2>
+<p>
+<ul class="publi">
 
 
 
-<!-- Conference articles -->
+<li>
 
-<!-- <div class="section">
-<h2>Conference articles</h2>
-<ol reversed="true" class="publi">
+<auteurs>with <a href="https://sites.google.com/ug.uchile.cl/espinoza" class="research-link">B. Espinoza</a> and <a href="https://sites.google.com/view/amaass/" class="research-link">A. Maass</a></auteurs><span class="research-period">.</span><br/>
+<titre>"Topological weak mixing for certain linear involutions of hyperelliptic type"</titre>
+<br/>
 
-</ol>
+
+
+
+
+
+
+<label for="prepublication-abstract-1" class="research-button">Abstract</label><span class="research-separator">.</span> 
+
+<a href="https://arxiv.org/abs/2607.16830" class="research-button">Preprint</a><span class="research-separator">.</span> 
+
+
+<label for="prepublication-bibtex-1" class="research-button">BibTeX</label><span class="research-separator">.</span>
+
+
+
+<input type="checkbox" id="prepublication-abstract-1" class="research-toggle">
+<div class="research-content">
+<abstract>A linear involution is an injective piecewise isometry defined on a pair of disjoint intervals. They are defined by a combinatorial data given by a generalized permutation and a length vector. As it was done for interval exchange transformations, it is conjectured that, except for some combinatorial data, a typical linear involution is measure-theoretically weakly mixing. In this direction, one may first explore the question of topological weak mixing for topological models of linear involutions. In this article we prove topological weak mixing for the natural symbolic codings of typical linear involutions defined by some generalized permutations of hyperelliptic type. We consider the generalized permutation \[\sigma_{s,r} = \begin{pmatrix} 0 & A & 1 & 2 & \cdots & s & A & s+1 & s+2 & \cdots & s+r \\ s+r & \cdots & s+2 & s+1 & B & s & \cdots & 2 & 1 & B & 0 \end{pmatrix}. \] We prove that the natural symbolic coding of a typical linear involution defined by a generalized permutation in the Rauzy class of \(\sigma_{s, r}\) is topologically weakly mixing, provided that it has at least a simple letter and its associated genus is sufficiently large.</abstract>
+</div>
+
+
+
+<input type="checkbox" id="prepublication-bibtex-1" class="research-toggle">
+<div class="research-content bibtex-content">
+<tt>@online{arbuluLinearInvolutions26,
+ AUTHOR = Arbulú, Felipe and Espinoza, Bastián and Maass, Alejandro},
+  TITLE = {Topological weak mixing for certain linear involutions of hyperelliptic type}, 
+ YEAR = {2026},
+ EPRINTTYPE = {arxiv},
+ EPRINTCLASS = {math.DS},
+ EPRINT = {2607.16830}
+}</tt>
+</div>
+
+
+</li>
+
+</ul>
 </p>
-</div> -->
+</div>
 
-<!-- Talks in conferences -->
+
 
 <div class="section">
 <h2>Talks</h2>
@@ -251,55 +367,49 @@ Abstract.
 <h3>Conferences</h3>
 
 
+<ul>
+<li>
+<titre>"Topological weak mixing for certain linear involutions of hyperelliptic type"</titre>
+<br/>
+<a href="https://dyadisc9.sciencesconf.org/">Dyadisc 9. Expensive Dynamics - The dynamic youth speaks out</a><br/>
+2026-06-04, Cap Hornu (Saint-Valery-sur-Somme, France)
+<br/>
+</li>
+</ul>
+
+
 
 <ul>
 <li>
-
 <titre>"The Jacobs–Keane theorem from the \(\mathcal{S}\)-adic viewpoint"</titre>
 <br/>
-
-<!-- TODO: put slides, if they are available -->
-
-<a href=https://izes.math.cnrs.fr>Workshop ANR IZES </a> <br/>
+<a href="https://izes.math.cnrs.fr">Workshop ANR IZES</a><br/>
 2024-06-30, Île de Porquerolles (Porquerolles, France)
 <br/>
-
 </li>
 </ul>
 
 
 
-
 <ul>
 <li>
-
 <titre>"The Jacobs–Keane theorem from the \(\mathcal{S}\)-adic viewpoint"</titre>
 <br/>
-
-<!-- TODO: put slides, if they are available -->
-
-<a href=https://www.lorentzcenter.nl/dynamics-on-zero-dimensional-spaces-new-connections.html>Dynamics on zero-dimensional spaces: new connections </a> <br/>
+<a href="https://www.lorentzcenter.nl/dynamics-on-zero-dimensional-spaces-new-connections.html">Dynamics on zero-dimensional spaces: new connections</a><br/>
 2024-05-13, Lorentz Center (Leiden, The Netherlands)
 <br/>
-
 </li>
 </ul>
 
 
 
-
 <ul>
 <li>
-
 <titre>"Dynamical properties of minimal Ferenczi subshifts"</titre>
 <br/>
-
-<!-- TODO: put slides, if they are available -->
-
-<a href=https://dyadisc6.sciencesconf.org/>Dyadisc 6. Dynamics on the Cantor set and applications </a> <br/>
+<a href="https://dyadisc6.sciencesconf.org/">Dyadisc 6. Dynamics on the Cantor set and applications</a><br/>
 2023-07-07, Université de Picardie Jules Verne (Amiens, France)
 <br/>
-
 </li>
 </ul>
 
@@ -315,44 +425,31 @@ Abstract.
 
 
 
-
 <ul>
 <li>
-
 <titre>"Dynamical properties of minimal Ferenczi subshifts"</titre>
 <br/>
-
-<!-- TODO: put slides, if they are available -->
-
-<a href=https://dyadisc5.sciencesconf.org/>Dyadisc 5. \(\mathcal{S}\)-adicity </a> <br/>
+<a href="https://dyadisc5.sciencesconf.org/">Dyadisc 5. \(\mathcal{S}\)-adicity</a><br/>
 2022-06-17, Université de Liège (Liège, Belgium)
 <br/>
-
 </li>
 </ul>
-
 
 
 
 <ul>
 <li>
-
 <titre>"Dynamical properties of symbolic rank one subshifts"</titre>
 <br/>
-
-<!-- TODO: put slides, if they are available -->
-
-<a href=https://sda2-2021.sciencesconf.org/>SDA-2. Systèmes dynamiques, automates et algorithmes </a> <br/>
+<a href="https://sda2-2021.sciencesconf.org/">SDA-2. Systèmes dynamiques, automates et algorithmes</a><br/>
 2021-11-29, Université de Caen Normandie (Caen, France)
 <br/>
-
 </li>
 </ul>
 
 
 
 
-</li>
 
 <h3>Seminars</h3>
 
@@ -364,93 +461,64 @@ Abstract.
 
 
 
+
 <ul>
 <li>
-
 <titre>"Analyse spectrale de certaines classes de sous-shifts \(\mathcal{S}\)-adiques"</titre>
 <br/>
-
-<!-- TODO: put slides, if they are available -->
-
-<a href=https://sites.google.com/view/seminaire-tsg>Séminaire de Théorie Spectrale et Géométrie </a> <br/>
+<a href="https://sites.google.com/view/seminaire-tsg">Séminaire de Théorie Spectrale et Géométrie</a><br/>
 2025-11-06, Institut Fourier (Grenoble, France)
 <br/>
-
 </li>
 </ul>
 
 
 
-
 <ul>
 <li>
-
 <titre>"Spectral analysis of some classes of \(\mathcal{S}\)-adic subshifts"</titre>
 <br/>
-
-<!-- TODO: put slides, if they are available -->
-
-<a href=https://mathematik.univie.ac.at/forschung/seminare/the-budapest-wien-dynamics-seminar/>The Budapest-Wien Dynamics Seminar </a> <br/>
+<a href="https://mathematik.univie.ac.at/forschung/seminare/the-budapest-wien-dynamics-seminar/">The Budapest-Wien Dynamics Seminar</a><br/>
 2025-04-11, BME Budapest (Budapest, Hungary)
 <br/>
-
 </li>
 </ul>
 
 
 
-
 <ul>
 <li>
-
 <titre>"Dynamical properties of minimal Ferenczi subshifts"</titre>
 <br/>
-
-<!-- TODO: put slides, if they are available -->
-
-<a href=https://www.mathematics.uliege.be/cms/c_4179137/fr/mathematics>Séminaire de Mathématiques discrètes </a> <br/>
+<a href="https://www.mathematics.uliege.be/cms/c_4179137/fr/mathematics">Séminaire de Mathématiques discrètes</a><br/>
 2023-05-31, Université de Liège (Liège, Belgium)
 <br/>
-
 </li>
 </ul>
 
 
 
-
 <ul>
 <li>
-
 <titre>"Dynamical properties of minimal Ferenczi subshifts"</titre>
 <br/>
-
-<!-- TODO: put slides, if they are available -->
-
-<a href=https://lmpa.univ-littoral.fr/index.php?page_id=10>Séminaire equipe ADA </a> <br/>
+<a href="https://lmpa.univ-littoral.fr/index.php?page_id=10">Séminaire equipe ADA</a><br/>
 2023-02-02, LMPA (Calais, France)
 <br/>
-
 </li>
 </ul>
 
 
 
-
 <ul>
 <li>
-
 <titre>"Dynamical properties of minimal Ferenczi subshifts"</titre>
 <br/>
-
-<!-- TODO: put slides, if they are available -->
-
-<a href=https://www.i2m.univ-amu.fr/agenda/seminaires/seminaire-ernest/>Séminaire Ernest </a> <br/>
+<a href="https://www.i2m.univ-amu.fr/agenda/seminaires/seminaire-ernest/">Séminaire Ernest</a><br/>
 2023-01-10, Institut de Mathématiques de Marseille (Marseille, France)
 <br/>
-
 </li>
 </ul>
-
 
 
 
@@ -460,43 +528,17 @@ Abstract.
 
 <ul>
 <li>
-
 <titre>"Dynamical properties of symbolic rank one systems"</titre>
 <br/>
-
-<!-- TODO: put slides, if they are available -->
-
-<a href=https://www.lamfa.u-picardie.fr/seminaires-colloques/article/seminaire-dynamique-et-probabilites>Séminaire Dynamique et Probabilités </a> <br/>
+<a href="https://www.lamfa.u-picardie.fr/seminaires-colloques/article/seminaire-dynamique-et-probabilites">Séminaire Dynamique et Probabilités</a><br/>
 2021-03-30, LAMFA (Amiens, France)
 <br/>
-
 </li>
 </ul>
 
 
-</li>
 </p>
-
-</div>  <!-- end of section -->
-
-<!-- Thesis -->
-
-<!-- <div class="section">
-<h2>Thesis</h2>
-<p>
-Thesis
-</p>
-</div> -->
-
-<!-- Organization of conferences, ... -->
-
-<!-- <div class="section">
-<h2>Conferences</h2>
-<ul>
-  <li>An item</li>
-  <li>Another item</li>
-
-</div>  -->
+</div>
 
 
 </div>
@@ -504,7 +546,7 @@ Thesis
 <hr>
 <div id="foot">
 <p>
-Last updated 26/05/08
+Last updated 26/07/21
 </p>
 </div>
 

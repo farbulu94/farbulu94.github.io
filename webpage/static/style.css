@@ -305,3 +305,7 @@ details[open] summary {
     font-size: 12px;
   }
 }
+
+.small-circle {
+  font-size: 0.2em;
+}

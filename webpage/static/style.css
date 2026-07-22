@@ -8,50 +8,118 @@ HR {
   border-top: solid;
 }
 
+/*Publications*/
+
 .publi {
   font-family: "Lato";
   line-height: 1.618em;
 }
 
-.publi auteurs{}
 .publi li
 {
   margin-bottom: 1em;
 }
 .publi a
-{
-  text-decoration: none;
+{ 
   color: #101010;
+  text-decoration: none;
 }
 .publi titre{
-  font-style: bold;
   text-decoration: underline;
 }
 .publi journal{
 }
-.publi volume{
-  font-style: bold;
-}
-.publi number{
-}
-.publi year{
-}
-.publi pages{
-}
+
+/* Abstracts */
+
 abstract {
   display: block;
 }
+
 .publi abstract {
-  background-color: #EAECEE;
-  margin-left: 1em;
-  margin-right: 1em;
-  margin-top: .5em;
-  margin-bottom: .5em;
+  margin: 0.5em 1em;
   padding: 2%;
+  background-color: #EAECEE;
 }
 .publi abstract a {
   color: #F00000;
 }
+
+/* Research links and buttons */
+
+.research-link {
+  color: #0000EE !important;
+  font-weight: normal !important;
+  text-decoration: none;
+}
+
+.research-author-no-link {
+  color: inherit !important;
+  font-weight: normal !important;
+  text-decoration: none;
+}
+
+.research-button {
+  color: #0000EE !important;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.research-period,
+.research-separator {
+  color: black;
+  font-weight: normal;
+}
+
+.research-period,
+.research-separator {
+  color: black;
+  font-weight: normal;
+}
+
+/* Expandable research content */
+
+.research-content {
+  display: none;
+  margin-top: 0.5em;
+  padding: 1em 1.25em;
+  background: #EAECEE;
+  font-size: inherit !important;
+  line-height: inherit;
+}
+
+.research-content abstract,
+.research-content tt {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent !important;
+  font-size: inherit !important;
+  line-height: inherit;
+}
+
+.research-toggle:checked + .research-content {
+  display: block;
+}
+
+/* BibTeX */
+
+.bibtex-content pre {
+  margin: 0;
+  padding: 0;
+  font-family: "Inconsolata", monospace;
+  font-size: inherit;
+  line-height: 1.2;
+  white-space: pre-wrap;
+}
+
+.bibtex-content code {
+  font: inherit;
+  white-space: inherit;
+}
+
+/* Page headings */
 
 #title {
   font-family: 'Roboto Slab';
@@ -63,8 +131,7 @@ abstract {
   padding-left: .2em;
 }
 
-#top{
-}
+/* Main layout */
 
 #left{
   float: left;
@@ -85,10 +152,7 @@ abstract {
 #menu a {
   color: #0000EE;
   background: #EAECEE ;
-  padding-top: .5em;
-  padding-bottom: .5em;
-  padding-left: .5em;
-  padding-right: .5em;
+  padding: 0.5em;
 }
 
 #menu .selected a {
@@ -131,7 +195,7 @@ abstract {
   text-align: justify;
 }
 
-/* Toggle content */
+/* Generic toggle content */
 
 /* Hiddes checkbox */
 input[type="checkbox"] {
@@ -159,8 +223,7 @@ summary {
     color: #0000EE;
 }
 
-details[open] summary {
-}
+/* Responsive menu */
 
 @media only screen and (max-width: 850px) {
   #menu ul {
@@ -184,6 +247,12 @@ details[open] summary {
   }
   #foot {
     font-size: 20px;
+  }
+  .dot {
+    font-size: 4px;
+  }
+  .minus {
+    font-size: 12px;
   }
 }
 @media all and (max-width:1000px) {
@@ -219,6 +288,9 @@ details[open] summary {
   #foot {
     font-size: 17px;
   }
+  .minus {
+    font-size: 10px;
+  }
 }
 @media all and (max-width:720px) {
   .section {
@@ -253,6 +325,10 @@ details[open] summary {
   #foot {
     font-size: 15px;
   }
+  }
+  .minus {
+    font-size: 11px;
+  }
 }
 @media all and (max-width:600px) {
   .section {
@@ -269,6 +345,9 @@ details[open] summary {
   }
   #foot {
     font-size: 14px;
+  }
+  .dot {
+    font-size: 3px;
   }
 }
 @media all and (max-width:560px) {
@@ -287,6 +366,9 @@ details[open] summary {
   #foot {
     font-size: 13px;
   }
+  .minus {
+    font-size: 10px;
+  }
 }
 @media all and (max-width:520px) {
   .section {
@@ -304,8 +386,18 @@ details[open] summary {
   #foot {
     font-size: 12px;
   }
+  .dot {
+    font-size: 4px;
+  }
+  .minus {
+    font-size: 9px;
+  }
 }
 
-.small-circle {
-  font-size: 0.2em;
+.minus {
+  font-size: 9px;
+}
+
+.dot {
+    font-size: 4px;
 }

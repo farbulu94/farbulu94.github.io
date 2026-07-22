@@ -44,75 +44,6 @@ pp. {{ pub.pages[0] }}–{{ pub.pages[1] }}
 {% block title %}Research{% endblock %}
 {% block body %}
 
-<style>
-.research-link,
-.research-link:link,
-.research-link:visited,
-.research-link:hover,
-.research-link:active {
-  color: #0000EE !important;
-  font-weight: normal !important;
-  text-decoration: none;
-}
-
-.research-author-no-link {
-  color: inherit !important;
-  font-weight: normal !important;
-  text-decoration: none;
-}
-
-.research-button,
-.research-button:link,
-.research-button:visited,
-.research-button:hover,
-.research-button:active {
-  color: #0000EE !important;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.research-period,
-.research-separator {
-  color: black;
-  font-weight: normal;
-}
-
-.research-toggle {
-  display: none;
-}
-
-.research-content {
-  display: none;
-  margin-top: 0.5em;
-  padding: 1em 1.25em;
-  background: #EAECEE;
-  font-size: inherit !important;
-  line-height: inherit;
-}
-
-.research-content abstract,
-.research-content tt {
-  display: block;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  background: transparent !important;
-  font-size: inherit !important;
-  line-height: inherit;
-}
-
-.research-toggle:checked + .research-content {
-  display: block;
-}
-
-.bibtex-content tt {
-  font-family: monospace;
-  font-size: 0.9em !important;
-  line-height: inherit;
-  white-space: pre-wrap;
-}
-</style>
-
 <div class="section">
 <h2>Publications</h2>
 <p>
@@ -147,7 +78,7 @@ pp. {{ pub.pages[0] }}–{{ pub.pages[1] }}
 {% if pub.bibtex %}
 <input type="checkbox" id="{{ bibtex_id }}" class="research-toggle">
 <div class="research-content bibtex-content">
-<tt>{{ pub.bibtex }}</tt>
+<pre><code>{{pub.bibtex}}</code></pre>
 </div>
 {% endif %}
 
@@ -190,7 +121,7 @@ pp. {{ pub.pages[0] }}–{{ pub.pages[1] }}
 {% if pub.bibtex %}
 <input type="checkbox" id="{{ bibtex_id }}" class="research-toggle">
 <div class="research-content bibtex-content">
-<tt>{{ pub.bibtex }}</tt>
+<pre><code>{{pub.bibtex}}</code></pre>
 </div>
 {% endif %}
 
